@@ -55,7 +55,29 @@ const Dashboard = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [offset]);
+
+  //Intersection observer is used to load more data when the user scrolls to the bottom of the page
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setOffset((prevOffset) => prevOffset + 10);
+        }
+      },
+      { threshold: 1 }
+    );
+
+    if (lastJobCardRef.current) {
+      observer.observe(lastJobCardRef.current);
+    }
+
+    return () => {
+      if (lastJobCardRef.current) {
+        observer.unobserve(lastJobCardRef.current);
+      }
+    };
+  }, [jobsData.length]);
 
   return (
     <>
@@ -73,7 +95,9 @@ const Dashboard = () => {
               <JobCard
                 jobtitle={job.jobRole}
                 location={job.location}
-                description={job.jobDetailsFromCompany}
+                description={
+                  job.jobDetailsFromCompany
+                }
                 minSalary={job.minJdSalary?.toString()}
                 maxSalary={job.maxJdSalary?.toString()}
                 company={job.companyName}
