@@ -33,8 +33,8 @@ const inputStyles = {
     fontSize: "12px !important",
     color: "black",
   },
-  "&..css-1x5jdmq":{
-    fontSize:"12px"
+  "& .css-1x5jdmq":{
+    fontSize:"12px !important",
   }
 };
 const selectStyles = {
