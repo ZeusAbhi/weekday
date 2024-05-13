@@ -1,4 +1,4 @@
-# <span style="color: #FF5733;">Project Name</span>
+# <span style="color: #FF5733;">Weekday</span>
 
 ## <span style="color: #FF5733;">Description</span>
 A candidate application platform that allows users to view job listings, filter jobs based on various criteria, and includes infinite scroll for a seamless browsing experience. The platform provides a user-friendly interface for viewing and applying to jobs.
