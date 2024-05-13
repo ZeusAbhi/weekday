@@ -33,6 +33,9 @@ const inputStyles = {
     fontSize: "12px !important",
     color: "black",
   },
+  "&..css-1x5jdmq":{
+    fontSize:"12px"
+  }
 };
 const selectStyles = {
   minHeight: "38px",
