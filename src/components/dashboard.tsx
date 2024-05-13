@@ -28,7 +28,7 @@ const Dashboard = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3000/jdList?_start=${offset}&_limit=10${queryParams}`,
+          `${process.env.REACT_APP_WEEKDAY_URL}?_start=${offset}&_limit=10${queryParams}`,
           {
             method: "GET",
             headers: {
