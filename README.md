@@ -1,46 +1,91 @@
-# Getting Started with Create React App
+# <span style="color: #FF5733;">Project Name</span>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## <span style="color: #FF5733;">Description</span>
+A candidate application platform that allows users to view job listings, filter jobs based on various criteria, and includes infinite scroll for a seamless browsing experience. The platform provides a user-friendly interface for viewing and applying to jobs.
 
-## Available Scripts
+## <span style="color: #FF5733;">Installation</span>
 
-In the project directory, you can run:
+To get started with this project, follow these steps:
 
-### `npm start`
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/ZeusAbhi/weekday.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd weekday
+    ```
+3. Install dependencies:
+    ```sh
+    npm install
+    ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## <span style="color: #FF5733;">Usage</span>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To run the development server locally, follow these steps:
 
-### `npm test`
+1. Navigate to the `src` directory:
+    ```sh
+    cd src
+    ```
+2. Run JSON Server to simulate the backend API:
+    ```sh
+    npx run json-server db.json
+    ```
+3. Navigate back to the project directory:
+    ```sh
+    cd ..
+    ```
+4. Start the development server:
+    ```sh
+    npm run start
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## <span style="color: #FF5733;">Project Structure</span>
 
-### `npm run build`
+The project structure is as follows:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `src/`: Main source code directory.
+  - `components/`: Contains React components.
+  - `assets/`: Contains static assets.
+  - `Redux/`: Contains Redux-related files.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## <span style="color: #FF5733;">Tech Stack</span>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The project is built using the following technologies:
 
-### `npm run eject`
+- ReactJS
+- Redux
+- CSS
+- Material UI
+- JSON Server
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## <span style="color: #FF5733;">Features</span>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Each job listing is displayed as a card containing the following information:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **Job Title**
+- **Company Name**
+- **Location**
+- **Job Description** (Limited with an option to expand)
+- **Experience Required**
+- **Apply Button/Link**
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## <span style="color: #FF5733;">Filters</span>
 
-## Learn More
+Refine job listings based on the following criteria:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Minimum Experience**
+- **Company Name**
+- **Location**
+- **Remote/On-site**
+- **Role**
+- **Minimum Base Pay**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## <span style="color: #FF5733;">Infinite Scroll</span>
+
+Implemented infinite scroll to load additional job listings automatically as the user scrolls down the page.
+
+## <span style="color: #FF5733;">License</span>
+
+This project is licensed under the [License Name] License - see the [LICENSE.md](LICENSE.md) file for details.
