@@ -55,7 +55,48 @@ const Dashboard = () => {
       }
     };
     fetchData();
-  }, [offset]);
+  }, [offset, queryParams]);
+
+  //build query params
+  useEffect(() => {
+    let baseQueryParams = "";
+    setJobsData([]);
+
+    globalFilterData.map(
+      (filter: { placeholder: string; filterData: string[] }) => {
+        if (filter.placeholder === "Roles") {
+          filter.filterData.map((role) => {
+            baseQueryParams += `&jobRole_like=${role}`;
+          });
+        }
+        if (filter.placeholder === "Location") {
+          filter.filterData.map((location) => {
+            baseQueryParams += `&location_like=${location}`;
+          });
+        }
+        if (filter.placeholder === "Experience") {
+          filter.filterData.map((exp) => {
+            baseQueryParams += `&minExp_gte=${exp}`;
+          });
+        }
+        if (filter.placeholder === "Search Company Name") {
+          if (filter.filterData.length > 0)
+            baseQueryParams += `&companyName_like=${filter.filterData}`;
+        }
+        if (filter.placeholder === "Minimum Base Pay") {
+          filter.filterData.map(
+            (salary) =>
+              (baseQueryParams += `&minJdSalary_gte=${salary.replace(
+                "L",
+                ""
+              )}`)
+          );
+        }
+      }
+    );
+    setQueryParams(baseQueryParams);
+    return () => setOffset(0);
+  }, [globalFilterData]);
 
   //Intersection observer is used to load more data when the user scrolls to the bottom of the page
   useEffect(() => {
