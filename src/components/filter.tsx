@@ -26,7 +26,7 @@ const MenuProps = {
   },
 };
 const inputStyles = {
-  minHeight: "38px",
+  height: "auto",
   "& .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input": {
     padding: "0px !important",
     paddingLeft: "8px !important",
@@ -123,7 +123,7 @@ const Filter = ({ filterMenuData, placeholder, variant }: filterMenuProps) => {
         <div style={{ opacity: "0", height: "10px" }}>{placeholder}</div>
       )}
       <FormControl
-        sx={{ m: 1, minWidth: 150, maxWidth: 1000, height: "auto" }}
+        sx={{ m: 1, minWidth: 150, maxWidth: 1000, height: 38 }}
         key={placeholder}
       >
         {/* Render input based on variant */}
