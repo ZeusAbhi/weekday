@@ -26,7 +26,7 @@ const MenuProps = {
   },
 };
 const inputStyles = {
-  height: "auto",
+  height: "38px",
   "& .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input": {
     padding: "0px !important",
     paddingLeft: "8px !important",
