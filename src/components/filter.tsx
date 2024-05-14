@@ -123,7 +123,7 @@ const Filter = ({ filterMenuData, placeholder, variant }: filterMenuProps) => {
         <div style={{ opacity: "0", height: "10px" }}>{placeholder}</div>
       )}
       <FormControl
-        sx={{ m: 1, minWidth: 150, maxWidth: 1000, height: 38 }}
+        sx={{ m: 1, minWidth: 150, maxWidth: 1000, height: "auto" }}
         key={placeholder}
       >
         {/* Render input based on variant */}

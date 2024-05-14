@@ -241,7 +241,7 @@ const JobCard = ({
                 gap: "0.5rem",
               }}
             >
-              <a href={jdLink} style={{ width: "100%" }}>
+              <a href={jdLink} style={{ width: "100%",color:"black"}}>
                 <button
                   style={{
                     width: "100%",

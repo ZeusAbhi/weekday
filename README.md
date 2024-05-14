@@ -30,7 +30,7 @@ To run the development server locally, follow these steps:
     ```
 2. Run JSON Server to simulate the backend API:
     ```sh
-    npx run json-server db.json
+    npx json-server db.json
     ```
 3. Navigate back to the project directory:
     ```sh
